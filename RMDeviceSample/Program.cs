@@ -117,9 +117,9 @@ namespace RMDeviceSample
         //private static string DeviceID = "<replace>";
         //private static string PrimaryAuthKey = "<replace>";
         private static string ObjectTypePrefix = "";// Replace with your prefix
-        private static string HostName = "mdsrmsolutions.azure-devices.net";
-        private static string DeviceID = "RPTEST";
-        private static string PrimaryAuthKey = "CpxBzKEljGJc2lTKHzMyOazBGEuaNF3GZBOrM2jzLPI=";
+        private static string HostName = "";
+        private static string DeviceID = "";
+        private static string PrimaryAuthKey = "";
 
         private static DeviceClient Client = null;
         private static CancellationTokenSource cts = new CancellationTokenSource();
@@ -265,7 +265,7 @@ namespace RMDeviceSample
         static void Main(string[] args)
         {
             string DeviceConnectionString;
-            string environmentConnectionString = Environment.GetEnvironmentVariable("HostName=mdsrmsolutions.azure-devices.net;DeviceId=RPTEST;SharedAccessKey=CpxBzKEljGJc2lTKHzMyOazBGEuaNF3GZBOrM2jzLPI=");
+            string environmentConnectionString = Environment.GetEnvironmentVariable("");
             if (!String.IsNullOrEmpty(environmentConnectionString))
             {
                 DeviceConnectionString = environmentConnectionString;
