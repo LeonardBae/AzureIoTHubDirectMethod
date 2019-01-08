@@ -25,7 +25,7 @@ namespace DirectMethod
         {
             this.InitializeComponent();
             InitGPIO();
-            deviceClient = DeviceClient.CreateFromConnectionString("HostName=mdsrmsolutions.azure-devices.net;DeviceId=rpmethod;SharedAccessKey=vKZ/g7AmG229c2n/xR6OU/xZhAqSW676seVORpIfpZk=", TransportType.Mqtt);
+            deviceClient = DeviceClient.CreateFromConnectionString("====insert your device connection string====", TransportType.Mqtt);
             var method = deviceClient.SetMethodHandlerAsync("TurnOnLight", TurnOnTheLight, null);
             method = deviceClient.SetMethodHandlerAsync("TurnOffLight", TurnOffTheLight, null);
             Twin reportedProperties = new Twin("rpmethod");
